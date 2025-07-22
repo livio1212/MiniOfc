@@ -21,12 +21,12 @@ async def comands(ctx):
     "```"
     "─────────────── COMANDOS DISPONÍVEIS ───────────────\n"
     "\n"
-    "1. Comando 1\n"
-    "2. Comando 2\n"
-    "3. Comando 3\n"
-    "4. Comando 4\n"
-    "5. Comando 5\n"
-    "6. Comando 6\n"
+    "1. Comando \n"
+    "2. Comando \n"
+    "3. Comando \n"
+    "4. Comando \n"
+    "5. Comando \n"
+    "6. Comando \n"
     "\n"
     "─────────────── AÇÕES ───────────────\n"
     "Sair\n"
@@ -34,6 +34,7 @@ async def comands(ctx):
     "```"
 )
     await ctx.send(mensagem)
+
 
 @bot.command()
 async def sobre(ctx):
