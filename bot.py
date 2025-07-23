@@ -14,50 +14,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 @bot.event
 async def on_ready():
     print(f'✅ Bot conectado como {bot.user}')
-
-@bot.command()
-async def comands(ctx):
-    mensagem = (
-    "```"
-    "─────────────── COMANDOS DISPONÍVEIS ───────────────\n"
-    "\n"
-    "1. Comando \n"
-    "2. Comando \n"
-    "3. Comando \n"
-    "4. Comando \n"
-    "5. Comando \n"
-    "6. Comando \n"
-    "\n"
-    "─────────────── AÇÕES ───────────────\n"
-    "Sair\n"
-    "Chamar assistência\n"
-    "```"
-)
-    await ctx.send(mensagem)
-
-
-@bot.command()
-async def sobre(ctx):
-   mensagem = (
-    "```"
-    "─────────────── SOBRE ───────────────\n"
-    "\n"
-    "Este bot foi criado com o objetivo de auxiliar a oficial Myllena Areda em tarefas múltiplas\n"
-    "que demandam agilidade e eficiência.\n"
-    "\n"
-    "Este bot não tem finalidade lucrativa ou comercial, sendo destinado ao uso local e disponível\n"
-    "apenas para usuários autorizados pela oficial Myllena Areda Fernandes.\n"
-    "\n"
-    "Atividades suspeitas por usuários não autorizados serão devidamente investigadas e poderão\n"
-    "resultar em providências cabíveis.\n"
-    "\n"
-    "Esta aplicação possui todos os direitos reservados e é proibida sua reprodução total ou parcial\n"
-    "sem a autorização expressa da oficial Myllena Areda Fernandes.\n"
-    "\n"
-    "Aplicação desenvolvida por Livio Evangelista Da Costa Filho, que detém total acesso e liberdade\n"
-    "para realizar quaisquer modificações, exclusões ou melhorias.\n"
-    "```"
-   )
-   await ctx.send(mensagem)
+    await bot.load_extension('cogs.comandos')
+    await bot.load_extension('cogs.duvidas')
 
 bot.run(BOT_TOKEN)
